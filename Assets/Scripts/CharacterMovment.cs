@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class CharacterMovment : MonoBehaviour
@@ -11,6 +12,7 @@ public class CharacterMovment : MonoBehaviour
     float sprint;
     float baseSpeed;
     public bool canSprint;
+    private Vector3 moveDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +27,7 @@ public class CharacterMovment : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         float rightInput = Input.GetAxis("Horizontal");
 
-        Vector3 forward = Camera.main.transform.forward;
-        Vector3 right = Camera.main.transform.right;
 
-        forward.y = 0f;
-        right.y = 0f;
-
-        forward.Normalize();
-        right.Normalize();
-
-        Vector3 moveDirection = (forwardInput * forward) + (rightInput * right);
         moveDirection.Normalize();
         moveDirection.y = -1f;
         
@@ -49,5 +42,18 @@ public class CharacterMovment : MonoBehaviour
         {
             moveSpeed = baseSpeed;
         }
+    }
+    public void AddMoveInput(float forwardInput, float rightInput)
+    {
+        Vector3 forward = Camera.main.transform.forward;
+        Vector3 right = Camera.main.transform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        moveDirection = (forwardInput * forward) + (rightInput * right);
     }
 }

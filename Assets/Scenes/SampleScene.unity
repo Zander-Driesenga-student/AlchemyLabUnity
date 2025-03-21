@@ -4972,6 +4972,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c6de3c5237b39c04f83f242638a20ba7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1728823300}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c6de3c5237b39c04f83f242638a20ba7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1728823302}
   m_SourcePrefab: {fileID: 100100000, guid: c6de3c5237b39c04f83f242638a20ba7, type: 3}
 --- !u!4 &768438364 stripped
 Transform:
@@ -11773,10 +11776,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524482462}
-  - component: {fileID: 1524482463}
   - component: {fileID: 1524482464}
+  - component: {fileID: 1524482463}
   - component: {fileID: 1524482465}
   - component: {fileID: 1524482466}
+  - component: {fileID: 1524482467}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11812,8 +11816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125b4c385406ee747b36a59738a39c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xAxisTurnRate: 720
-  yAxisTurnRate: 720
+  xAxisTurnRate: 540
+  yAxisTurnRate: 540
 --- !u!143 &1524482464
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11868,6 +11872,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 2
   interactibleName: {fileID: 233230350}
+--- !u!114 &1524482467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524482461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc51374535ac00944a6eb6e332317cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1537177140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13733,6 +13749,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.55575943, y: 0.49046922, z: 0.57641315}
   m_Center: {x: -0.0000019675279, y: 0.24523461, z: 0.027896017}
+--- !u!114 &1728823302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728823297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eeb83e89682d674590940d9e9803707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: I'm a Chair!
 --- !u!1001 &1729569911
 PrefabInstance:
   m_ObjectHideFlags: 0

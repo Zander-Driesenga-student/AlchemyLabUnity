@@ -9,4 +9,9 @@ public class InteractionObject : MonoBehaviour
     {
         return interactionText;
     }
+
+    public void Interact()
+    {
+        print("I've been interacted with!");
+    }
 }

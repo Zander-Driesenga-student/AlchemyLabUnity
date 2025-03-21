@@ -37,4 +37,12 @@ public class PlayerInteractions : MonoBehaviour
             interactibleName.text = newText;
         }
     }
+
+    public void TryInteract()
+    {
+        if (targetInteraction)
+        {
+            targetInteraction.Interact();
+        }
+    }
 }
