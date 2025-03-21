@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,15 @@ public class CharacterMovment : MonoBehaviour
     CharacterController characterController;
 
     public float moveSpeed = 5f;
+    float sprint;
+    float baseSpeed;
+    public bool canSprint;
     // Start is called before the first frame update
     void Start()
     {
         characterController = FindAnyObjectByType<CharacterController>();
+        baseSpeed = moveSpeed;
+        sprint = moveSpeed * 2;
     }
 
     // Update is called once per frame
@@ -31,7 +37,17 @@ public class CharacterMovment : MonoBehaviour
         Vector3 moveDirection = (forwardInput * forward) + (rightInput * right);
         moveDirection.Normalize();
         moveDirection.y = -1f;
+        
+        if (Input.GetKey(KeyCode.LeftShift) & canSprint)
+        {
+            moveSpeed = sprint;
+        }
 
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = baseSpeed;
+        }
     }
 }
