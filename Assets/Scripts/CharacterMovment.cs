@@ -24,8 +24,7 @@ public class CharacterMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forwardInput = Input.GetAxis("Vertical");
-        float rightInput = Input.GetAxis("Horizontal");
+        
 
 
         moveDirection.Normalize();

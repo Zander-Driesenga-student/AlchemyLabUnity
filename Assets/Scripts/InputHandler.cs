@@ -5,13 +5,15 @@ using UnityEngine;
 public class InputHandler : MonoBehaviour
 {
     FirstPersonCamera firstPersonCamera;
-    CharacterMovment characterMovment;
+    CharacterMovment characterMovement;
+    PlayerInteraction playerInteraction;
 
     // Start is called before the first frame update
     void Start()
     {
         firstPersonCamera = FindAnyObjectByType<FirstPersonCamera>();
-        characterMovment = FindAnyObjectByType<CharacterMovment>();
+        characterMovement = FindAnyObjectByType<CharacterMovment>();
+        playerInteraction = FindAnyObjectByType<PlayerInteraction>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class InputHandler : MonoBehaviour
     {
         HandleCameraInput();
         HandleCharacterMovement();
+        HandleInteractionInput();
     }
 
     void HandleCameraInput()
@@ -30,6 +33,17 @@ public class InputHandler : MonoBehaviour
     
     void HandleCharacterMovement()
     {
+        float forwardInput = Input.GetAxis("Vertical");
+        float rightInput = Input.GetAxis("Horizontal");
 
+        characterMovement.AddMoveInput(forwardInput, rightInput);
+    }
+
+    void HandleInteractionInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            playerInteraction.TryInteract();
+        }
     }
 }

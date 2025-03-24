@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInteractions : MonoBehaviour
+public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private Text interactibleName;
