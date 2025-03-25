@@ -16,7 +16,7 @@ public class MakeObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activate)
+        if (!activate)
         {
             for (int i = 0; i < amountOfObjects; i++)
             {
