@@ -1,6 +1,7 @@
 
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PushObject : MonoBehaviour
 {
     private Rigidbody rb;
