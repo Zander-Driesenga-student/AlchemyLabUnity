@@ -8758,7 +8758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveDisplay: {fileID: 1965622829}
-  objectiveText: Touch a green Bottle next to the boxes in the hidden room
+  objectiveText: 
   OnCompleteObjective:
     m_PersistentCalls:
       m_Calls:
@@ -12704,8 +12704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125b4c385406ee747b36a59738a39c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xAxisTurnRate: 540
-  yAxisTurnRate: 540
+  xAxisTurnRate: 360
+  yAxisTurnRate: 360
 --- !u!143 &1524482464
 CharacterController:
   m_ObjectHideFlags: 0
@@ -21662,7 +21662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ef8e3519423cb464699ee224401f430e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.495205
+      value: 18.139
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef8e3519423cb464699ee224401f430e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21670,7 +21670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef8e3519423cb464699ee224401f430e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.11184
+      value: -26.871
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef8e3519423cb464699ee224401f430e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28106,7 +28106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 414bf7d544bbe0749a06edbe19961a50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.300865
+      value: 17.946
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 414bf7d544bbe0749a06edbe19961a50, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28114,7 +28114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 414bf7d544bbe0749a06edbe19961a50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.621506
+      value: -26.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 414bf7d544bbe0749a06edbe19961a50, type: 3}
       propertyPath: m_LocalRotation.w
