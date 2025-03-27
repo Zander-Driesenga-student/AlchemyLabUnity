@@ -28,6 +28,7 @@ public class InputHandler : MonoBehaviour
     {
         firstPersonCamera.AddXAxisInput(Input.GetAxis("Mouse Y") * Time.deltaTime);
         firstPersonCamera.AddYAxisInput(Input.GetAxis("Mouse X") * Time.deltaTime);
+        
 
     }
     

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadScene(string newSceneName)
+    public static void LoadScene(string newSceneName)
+    {
+        SceneManager.LoadScene(newSceneName);
+    }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public static void Lose()
+    {
+        SceneManager.LoadScene("LoseScene");
+    }
 }
