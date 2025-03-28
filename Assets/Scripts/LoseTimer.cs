@@ -21,5 +21,6 @@ public class LoseTimer : MonoBehaviour
     void timerEnded()
     {
         onInteract.Invoke();
+        
     }
 }

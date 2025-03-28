@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
         targetInteraction = null;
         if (Physics.Raycast(origin, direction, out raycastHit, maxDistance))
         {
-            interactionText = raycastHit.collider.gameObject.name;
+            /*interactionText = raycastHit.collider.gameObject.name;*/
             targetInteraction = raycastHit.collider.gameObject.GetComponent<InteractionObject>();
         }
 
