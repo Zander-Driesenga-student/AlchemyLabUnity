@@ -13,6 +13,8 @@ public class CharacterMovment : MonoBehaviour
     float baseSpeed;
     public bool canSprint;
     private Vector3 moveDirection;
+    private float gravaty = -1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class CharacterMovment : MonoBehaviour
 
 
         moveDirection.Normalize();
-        moveDirection.y = -1f;
+        moveDirection.y = gravaty;
         
         if (Input.GetKey(KeyCode.LeftShift) & canSprint)
         {
@@ -54,5 +56,10 @@ public class CharacterMovment : MonoBehaviour
         right.Normalize();
 
         moveDirection = (forwardInput * forward) + (rightInput * right);
+    }
+
+    public void InversGravaty()
+    {
+        gravaty = 1f;
     }
 }
